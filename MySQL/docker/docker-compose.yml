@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  mysql:
+    image: mysql:5.7.43
+    ports:
+        - "3306:3306"
+    command: --init-file /data/application/init.sql
+    volumes:
+        - ./init.sql:/data/application/init.sql
+        - ./zipcodes.csv:/data/application/zipcodes.csv
+    environment:
+         MYSQL_ROOT_PASSWORD: b82399d919d4f9bbf169cb3bfb85a3ef

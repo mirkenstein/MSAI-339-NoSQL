@@ -16,6 +16,8 @@ Data pipelines are posted in the [data-pipelines](./data-pipelines) folder
 ### The datasets
 We will work with a small subset of the datasets listed [here](./datasets.md)
 
+### MySQL Docker Compose
+See the [MySQL](./MySQL/README.md) for a smaple 
 ### Free cloud services
 We will also introduce the MongoDB Atlas Free Tier Database Service 
 https://account.mongodb.com/account/login
