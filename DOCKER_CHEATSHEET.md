@@ -17,4 +17,7 @@ docker volume ls
 docker volume inspect <volume name>
 ```
 
-
+### Copy files between local environment and running container
+```shell
+ docker cp    es01-1:/usr/share/kibana/config/certs/ca/ca.crt ./
+```
