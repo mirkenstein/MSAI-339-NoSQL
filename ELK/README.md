@@ -15,7 +15,7 @@ docker network create elastic
 
 Pull the elasticsearch database image
 ````shell
-docker pull docker.elastic.co/elasticsearch/elasticsearch:8.8.2
+docker pull docker.elastic.co/elasticsearch/elasticsearch:8.10.4
 ````
 ### Start elasticsearch in Docker
 
@@ -26,7 +26,7 @@ sysctl -w vm.max_map_count=262144
 ````
 Launch the Elasticsearch server in Docker
 ```shell
-docker run --name es01 --net elastic  -e ES_JAVA_OPTS="-Xms1g -Xmx1g" -e NODE_NAME="es-01"  -p 9200:9200 -it docker.elastic.co/elasticsearch/elasticsearch:8.8.2
+docker run --name es01 --net elastic  -e ES_JAVA_OPTS="-Xms1g -Xmx1g" -e NODE_NAME="es-01"  -p 9200:9200 -it docker.elastic.co/elasticsearch/elasticsearch:8.10.4
 ```
 Same command but across multiline. Use either of the two.
 ```shell
@@ -35,7 +35,7 @@ docker run --name es01 \
 -e ES_JAVA_OPTS="-Xms1g -Xmx1g" \
 -e NODE_NAME="es-01"  \
 -p 9200:9200 \
--it docker.elastic.co/elasticsearch/elasticsearch:8.8.2
+-it docker.elastic.co/elasticsearch/elasticsearch:8.10.4
 ```
 
 After some time you  will see on the terminal the server password and enrollment tokens.
@@ -60,7 +60,7 @@ The output will look like this:
 • Copy the following enrollment token and start new Elasticsearch nodes with `bin/elasticsearch --enrollment-token <token>` (valid for the next 30 minutes):
  another-long-random-string....ABC== 
   If you're running in Docker, copy the enrollment token and run:
-  `docker run -e "ENROLLMENT_TOKEN=<token>" docker.elastic.co/elasticsearch/elasticsearch:8.8.2`
+  `docker run -e "ENROLLMENT_TOKEN=<token>" docker.elastic.co/elasticsearch/elasticsearch:8.10.4`
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   
 ````
@@ -85,11 +85,11 @@ In a separate terminal window download and start the Kibana instance
 
 Download Kibana image
 ```shell
-docker pull docker.elastic.co/kibana/kibana:8.8.2
+docker pull docker.elastic.co/kibana/kibana:8.10.4
 ```
 Start Kibana by running 
 ```shell
-docker run --name kib-01 --net elastic -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" -p 5601:5601 docker.elastic.co/kibana/kibana:8.8.2
+docker run --name kib-01 --net elastic -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" -p 5601:5601 docker.elastic.co/kibana/kibana:8.10.4
 ```
 Same as the above but multyline command
 ```shell
@@ -97,7 +97,7 @@ docker run --name kib-01 \
 --net elastic \
 -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" \
 -p 5601:5601 \
-docker.elastic.co/kibana/kibana:8.8.2
+docker.elastic.co/kibana/kibana:8.10.4
 ```
 
 When you start Kibana, a unique link is output to your terminal.
