@@ -18,7 +18,7 @@ Click on the View Data option and you will be redirected to the following page:
 
 from there the data-set can be exported in CSV format by clicking on the top right "Export" shortcut and then selecting the CSV option.
 
-This should download a file called `Medicare_Provider_Utilization_and_Payment_Data__Physician_and_Other_Supplier_PUF_CY2018.csv`
+This should download a file called `Medicare_Physician_Other_Practitioners_by_Provider_and_Service_2021.zip`
 
 
 ##### Alternative Data Download Method from the command line via
@@ -128,13 +128,12 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role   mas
  
 
 ### Logstash Pipeline
-1. Download Logstash container .
-[https://www.elastic.co/downloads/logstash](https://www.elastic.co/downloads/logstash)
-For Linux and Mac this will download a `*.tar.gz` archive and for windows `*.zip`
+1. Download Logstash container 
+ ```shell
+ docker pull docker.elastic.co/logstash/logstash:8.10.4
+```
  
 2. Move the downloaded CSV data file to a separate directory
-
- 
 
 
 
@@ -166,8 +165,14 @@ Left vertical Menu->Stack Management->Data Views
 
 Click on the `Create Data View` button on the top right.
 
-Step 1 of 2: Define index pattern type `logstash-clinical-trials` then Next button.
-
+Step 1 of 2: Define index pattern type `cms-puf-*` then Next button.
+The index pattern is a substring matching the  `index` settings defined in the pipeline config 
+```shell
+   elasticsearch {
+      "index" => "cms-puf-2021"
+      ...
+```
+Later if we add data from another year we will poinmt to the other indices with the same data view.
 Step 2 of 2: Configure settings: Select @timestamp field 
 
 Then click on `Create data view` to complete the process
