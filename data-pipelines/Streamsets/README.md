@@ -29,3 +29,10 @@ Install Type -> Docker image
 ### Create or Upload Sample Pipelines
 Navigate to Build->Pipelines and upload the pipeline file 
 `MyFirstPipeline.json`
+
+Here are some of the configurations for key stages of the pipeline.
+![src](1-My First Pipeline HTTP Source.png)
+
+![jdbc lookup](1-My First Pipeline JDBC Lookup.png)
+
+![coord](1-My First Pipeline Expression Edit.png)
