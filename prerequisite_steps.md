@@ -42,7 +42,7 @@ docker pull docker.elastic.co/logstash/logstash:8.10.4
 ```
 Streamsets
 ```shell
-docker pull streamsets/datacollector:5.6.1
+docker pull streamsets/datacollector:5.6.3
  ```
 
 
