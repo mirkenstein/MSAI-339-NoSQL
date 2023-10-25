@@ -24,7 +24,7 @@ Install Type -> Docker image
 
 ## At the final step you will be shown the data script to launch the Docker container
 
-![launch script](./4-New-Deployments-Control Hub-StreamSets.png)
+![launch script](./4-New-Deployments-ControlHub-StreamSets.png)
 
 We can put the token into a environment variable 
 ```shell
@@ -46,6 +46,8 @@ Navigate to Build->Pipelines and upload the pipeline file
 `MyFirstPipeline.json`
 
 Here are some of the configurations for key stages of the pipeline.
+
+
 ![src](./1-MyFirstPipelineHTTPSource.png)
 
 ![jdbc lookup](./1-MyFirstPipelineJDBCLookup.png)
@@ -67,5 +69,5 @@ $ keytool    -list -keystore  keystore.jks
 ```
 
 ### Running the pipeline 
-
-![RUN](./1-My First Pipeline Run.png)
+![pipeline-run](1-MyFirstPipelineRun.png)
+ 
