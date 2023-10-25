@@ -17,10 +17,19 @@ Data pipelines are posted in the [data-pipelines](./data-pipelines) folder
 We will work with a small subset of the datasets listed [here](./datasets.md)
 
 ### MySQL Docker Compose
-See the [MySQL](./MySQL/README.md) for a smaple 
+See the [MySQL](./MySQL/README.md) for a sample 
 ### Free cloud services
 We will also introduce the MongoDB Atlas Free Tier Database Service 
 https://account.mongodb.com/account/login
 
 And Streamsets Controlhub Data Pipeline
 https://cloud.login.streamsets.com/login
+
+
+
+For experimenting with Spark we can use Databricks cloud platform.
+The offer a free with no-time limit clusters under their community edition offering.
+https://www.databricks.com/product/faq/community-edition
+
+During the signup process select the community option instead of the 14 day free trial.
+https://community.cloud.databricks.com/

@@ -50,36 +50,41 @@ curl -X 'GET' \
   'https://data.cms.gov/data-api/v1/dataset/5c67d835-3862-4f63-897d-85d3eac82d5b/data?column=&offset=0&size=10' \
   -H 'accept: application/json'
 ```
-```js
-{
-npi: "1003000126",
-nppes_provider_last_org_name: "ENKESHAFI",
-nppes_provider_first_name: "ARDALAN",
-nppes_credentials: "M.D.",
-nppes_provider_gender: "M",
-nppes_entity_code: "I",
-nppes_provider_street1: "900 SETON DR",
-nppes_provider_city: "CUMBERLAND",
-nppes_provider_zip: "21502",
-nppes_provider_state: "MD",
-nppes_provider_country: "US",
-provider_type: "Internal Medicine",
-medicare_participation: "Y",
-place_of_service: "F",
-hcpcs_code: "99218",
-hcpcs_description: "Hospital observation care, typically 30 minutes",
-hcpcs_drug_indicator: "N",
-line_srvc_cnt: "19",
-bene_unique_cnt: "19",
-bene_day_srvc_cnt: "19",
-average_medicare_allowed: "100.88315789",
-average_submitted_chrg_amt: "476.94736842",
-average_medicare_payment: "76.795263158",
-average_medicare_standard: "77.469473684",
-:id: "row-c9fw.7h7k~jfg5",
-:created_at: "2020-11-19T15:47:53.518Z",
-:updated_at: "2020-11-19T15:47:53.518Z"
-}
+```json
+[{
+Rndrng_NPI: "1003000126",
+Rndrng_Prvdr_Last_Org_Name: "Enkeshafi",
+Rndrng_Prvdr_First_Name: "Ardalan",
+Rndrng_Prvdr_MI: "",
+Rndrng_Prvdr_Crdntls: "M.D.",
+Rndrng_Prvdr_Gndr: "M",
+Rndrng_Prvdr_Ent_Cd: "I",
+Rndrng_Prvdr_St1: "6410 Rockledge Dr Ste 304",
+Rndrng_Prvdr_St2: "",
+Rndrng_Prvdr_City: "Bethesda",
+Rndrng_Prvdr_State_Abrvtn: "MD",
+Rndrng_Prvdr_State_FIPS: "24",
+Rndrng_Prvdr_Zip5: "20817",
+Rndrng_Prvdr_RUCA: "1",
+Rndrng_Prvdr_RUCA_Desc: "Metropolitan area core: primary flow within an urbanized area of 50,000 and greater",
+Rndrng_Prvdr_Cntry: "US",
+Rndrng_Prvdr_Type: "Internal Medicine",
+Rndrng_Prvdr_Mdcr_Prtcptg_Ind: "Y",
+HCPCS_Cd: "99213",
+HCPCS_Desc: "Established patient outpatient visit, total time 20-29 minutes",
+HCPCS_Drug_Ind: "N",
+Place_Of_Srvc: "O",
+Tot_Benes: "116",
+Tot_Srvcs: "191",
+Tot_Bene_Day_Srvcs: "191",
+Avg_Sbmtd_Chrg: "125",
+Avg_Mdcr_Alowd_Amt: "107.53287958",
+Avg_Mdcr_Pymt_Amt: "83.908219895",
+Avg_Mdcr_Stdzd_Amt: "70.375863874"
+}, {
+    
+  }
+]
 
 
 ```
@@ -134,9 +139,14 @@ ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role   mas
 ```
  
 2. Move the downloaded CSV data file to a separate directory
+We will mount that directory with the csv file to the docker logstash container, mountpoint `/opt/data`
 
-
-
+The input section of the pipeline configuration file reads the `*csv` file from that directory
+```shell
+input {
+  file {
+    path =>"/opt/data/*.csv"
+```
  
 3. Run the pipeline
 We will attach two volumes to the pipeline. One for the configuraion file and another one with the data
@@ -152,7 +162,20 @@ https://www.elastic.co/guide/en/logstash/current/docker-config.html
  docker.elastic.co/logstash/logstash:8.10.4 
 
 ```
-4. Open Kibana in your browser 
+
+in the current repository the pipeline folder is called `CMS` 
+
+5. Wait for the pipeline to start ingesting data. 
+If all successfully you should see many dots appearing on the terminal.
+
+For debugging purpose you can change the output codec from `dots` to `rubydebug`
+```shell
+stdout { codec => rubydebug}
+```
+This would print the individual records.
+
+
+6. Open Kibana in your browser 
 
 Open the URL
 [http://localhost:5601/](http://localhost:5601/)

@@ -11,20 +11,20 @@ Deployment Type -> Data Collector
 Install Type -> Docker image 
 
 
-![Self Managed D ](1-New-Deployments-Control Hub-StreamSets.png)
+![Self Managed D ](./1-New-Deployments-Control Hub-StreamSets.png)
 
 
 
 
-![New Deployment Dialog](2-New-Deployments-Control Hub-StreamSets.png)
+![New Deployment Dialog](./2-New-Deployments-Control Hub-StreamSets.png)
 
 
 
-![Docker image ](3-New-Deployments-Control Hub-StreamSets.png)
+![Docker image ](./3-New-Deployments-Control Hub-StreamSets.png)
 
 ## At the final step you will be shown the data script to launch the Docker container
 
-![launch script](4-New-Deployments-Control Hub-StreamSets.png)
+![launch script](./4-New-Deployments-Control Hub-StreamSets.png)
 
 We can put the token into a environment variable 
 ```shell
@@ -46,11 +46,11 @@ Navigate to Build->Pipelines and upload the pipeline file
 `MyFirstPipeline.json`
 
 Here are some of the configurations for key stages of the pipeline.
-![src](1-My First Pipeline HTTP Source.png)
+![src](./1-My First Pipeline HTTP Source.png)
 
-![jdbc lookup](1-My First Pipeline JDBC Lookup.png)
+![jdbc lookup](./1-My First Pipeline JDBC Lookup.png)
 
-![coord](1-My First Pipeline Expression Edit.png)
+![coord](./1-MyFirstPipelineExpressionEdit.png)
 
 ## Certificate Steps
 
@@ -68,4 +68,4 @@ $ keytool    -list -keystore  keystore.jks
 
 ### Running the pipeline 
 
-![](1-My First Pipeline Run.png)
+![RUN](./1-My First Pipeline Run.png)
