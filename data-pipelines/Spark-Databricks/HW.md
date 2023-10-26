@@ -4,7 +4,7 @@ All 3 questions are on  db collection `sample_mflix.embedded_movies`
   a. Movies `year` between 1975 and 1980
   c. Display only 3 columns `title`,`year`, `runtime`
   b. Order by runtime
-3. Write an aggregation by `year` with averege   
+3. Write an aggregation by `year` with averege   `runtime`
 4. Which actor appears in the highest number of movies?
 
 ### Spark Databriks
