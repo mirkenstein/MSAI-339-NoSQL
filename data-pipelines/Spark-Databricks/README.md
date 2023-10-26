@@ -22,3 +22,6 @@ https://docs.databricks.com/en/dbfs/databricks-datasets.html
 Notebook with code for importing data from Chicago Data Portal to MongoDB Atlas 
 published here
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7567016051051197/1979567446034704/7192593576348604/latest.html
+
+Intro Sample Datasets
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7567016051051197/2957017482322847/7192593576348604/latest.html
