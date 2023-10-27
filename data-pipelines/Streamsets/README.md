@@ -33,8 +33,8 @@ export STREAMSETS_DEPLOYMENT_TOKEN='eyJ0eXAiO.xyz...4OSJ9.'
 and launch the script adding the network flag and name the deployment
 ```shell
 docker run -d  -e http_proxy= -e https_proxy= \
- --name sdc
- --net elastic
+ --name sdc \
+ --net elastic \
  -e STREAMSETS_DEPLOYMENT_SCH_URL=https://na01.hub.streamsets.com \
  -e STREAMSETS_DEPLOYMENT_ID=749fa050-6663-4770-b0e9-94ba695437db:fee5f6e9-48dd-11ee-8fee-2d7a390c8589 \
  -e STREAMSETS_DEPLOYMENT_TOKEN=$STREAMSETS_DEPLOYMENT_TOKEN \
