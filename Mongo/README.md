@@ -1,4 +1,10 @@
-### Download and Run MongoDB
+### Atlas MongoDB Cloud Service 
+MongoDB offers free  500MB cluster with no time limit.
+Simply signup at  https://www.mongodb.com/cloud/atlas/register
+
+For detail steps on setting up Atlass, loading sample datasets and connecting see  [README_ATLAS.md](README_ATLAS.md)
+
+### Download and Run MongoDB Locally
 
 ```shell
 docker pull mongo:6.0.7
