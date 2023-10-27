@@ -4,6 +4,10 @@ We will use the community edition  https://community.cloud.databricks.com/
 which offers free Spark clusters with no time limit.
 
 ### Signup for Databricks community Edition
+> [!IMPORTANT]  
+>Community edition signup is using the same form as the regular paid service. At step 2 of the signup process 
+> there is a link <ins>Get started with Community Edition</ins> which will enable the free no time limit community service.  
+
 At the signup page  https://www.databricks.com/try-databricks
 
 Fill out the form and click continue
@@ -31,6 +35,9 @@ We will build an entirely cloud based data pipeline Managed by databricks and pu
 
 ### Quick Tutorials on ETL
 https://docs.databricks.com/en/getting-started/etl-quick-start.html
+
+### Nested Structure 
+https://docs.databricks.com/en/_extras/notebooks/source/complex-nested-structured.html
 
 ### Sample datasets 
 There are datasets that can be used directly from your Databricks workspace.

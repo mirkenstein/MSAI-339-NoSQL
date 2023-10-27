@@ -6,11 +6,11 @@ The first dataset is from the
 
 https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service
 
-##### To preview the data online and for collumn definitios go to this link
+##### To preview the data online and for column definitions go to this link
 https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service/data
 
 ##### Data Table Preview and Download
-Click on the View Data option and you will be redirected to the following page: 
+Click on the View Data option, and you will be redirected to the following page: 
 
 [https://data.cms.gov/Medicare-Physician-Supplier/Medicare-Provider-Utilization-and-Payment-Data-Phy/hczc-ufy5/data](https://data.cms.gov/Medicare-Physician-Supplier/Medicare-Provider-Utilization-and-Payment-Data-Phy/hczc-ufy5/data)
 
@@ -36,7 +36,7 @@ curl  -o Medicare_Physician_Other_Practitioners_by_Provider_and_Service_2021.zip
 
 Or with the `aria2`  utility
 ```shell
-aria2c -s 16 -x 16  -O Medicare_Physician_Other_Practitioners_by_Provider_and_Service_2021.zip https://data.cms.gov/data-api/v1/dataset/5c67d835-3862-4f63-897d-85d3eac82d5b/data-viewer?_format=csv
+aria2c -s 16 -x 16   https://data.cms.gov/data-api/v1/dataset/5c67d835-3862-4f63-897d-85d3eac82d5b/data-viewer?_format=csv
 ```
     
 #### Preview Sample data via the SODA API
@@ -93,7 +93,7 @@ We will use the column name definitions from the JSON file
 # Elasticsearch-Kibana Provisioning
 
 ###Provision Elasticsearch and Kibana with docker as 
-Follow the instructions in [ELK](./ELK/README.md)
+See the instructions in [ELK](./ELK/README.md)
  
  
 To verify that the cluster is up and running you can visit the following endpoints in your web browser

@@ -1,7 +1,6 @@
 
 ### Get started with MongoDB Atlas
-MongoDB Atlas is a data platform, designed for developers, which inte
-grates a multi-cloud database with various data services. It simplifies the process of database deployment and management while facilitating the development of modern data-driven applications.
+MongoDB Atlas is a data platform, designed for developers, which integrates a multi-cloud database with various data services. It simplifies the process of database deployment and management while facilitating the development of modern data-driven applications.
 
 The MongoDB Atlas registration is completely free and doesn't require a credit card. Follow the link below and create your account:
 
@@ -36,10 +35,12 @@ This will load approximately 300 Mb of data into your cluster. It may take a few
 
 ## Security quickstart
 
-:::info
-By default your Atlas deployment is completely locked down. To access it, you need to create access credentials and configure network access.
-The access is under the Security menu group
-:::
+> [!IMPORTANT]  
+>By default your Atlas deployment is completely locked down. To access it, you need to create access credentials and configure network access.
+The access is under the Security menu group.
+ 
+
+ 
 To create a database user navigate to **Database Access** 
 
 ![Mongo-Atlas-navmenu.png](Mongo-Atlas-navmenu.png)
@@ -54,3 +55,6 @@ and click on the ![Mongo-Atlas-add-user-button.png](Mongo-Atlas-add-user-button.
 ![Mongo-Atlas-networkIP.png](Mongo-Atlas-networkIP.png)
 
 3. Finally, click **Finish and Close** and then, **Go to Databases**.
+
+## Credits
+Credits: https://joellord.github.io/vector-search-lab/docs/mongodb-atlas/get-started-atlas
