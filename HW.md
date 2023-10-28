@@ -15,11 +15,16 @@ https://www.mongodb.com/docs/v3.0/tutorial/project-fields-from-query-results/#re
 https://www.mongodb.com/docs/manual/reference/operator/query/lte/#perform-an-update-based-on-embedded-document-fields
 
 2. Write an aggregation aggregating `year` which calculates sum of all`runtime` for movies where `year` is between  1975 and 1980 including.
+ 
+ Helpful documentation
+  
 https://www.mongodb.com/docs/manual/aggregation/
 
 Return results would look like  the 
-year|sumRuntime
-
+```csv
+year,sumRuntime
+1975,1234
+```
 ### Spark Databriks
 Evey cluster in databricks hase access to preloaded datasets.
 
