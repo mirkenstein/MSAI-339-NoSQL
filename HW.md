@@ -3,10 +3,12 @@ All 3 questions are on  db collection `sample_mflix.embedded_movies`
 To load the sample database follow the instructions here [https://github.com/mirkenstein/MSAI-339-NoSQL/blob/master/Mongo/README_ATLAS.md](https://github.com/mirkenstein/MSAI-339-NoSQL/blob/master/Mongo/README_ATLAS.md)
 
 1. Write a  query  which captures all 3 requirements:
-  a. Movies with `year` between 1975 and 1980
-  b. Display only 3 columns `title`,`year`, `runtime`
-  c. Order by runtime (asc or desc)
-  d. Return  top 5 results and submit as part of your homework.
+    * Movies with `year` between 1975 and 1980
+    * Display only 3 columns `title`,`year`, `runtime`
+    * Order by runtime (asc or desc)
+
+
+    Submission:  Return  top 5 results and submit as part of your homework submission.
 
 Return results would look like  this
 ```csv 
