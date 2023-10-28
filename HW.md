@@ -21,8 +21,20 @@ Return results would look like  the
 year|sumRuntime
 
 ### Spark Databriks
+Evey cluster in databricks hase access to preloaded datasets.
+
+The dataset `/databricks-datasets/adult/adult.data` is part of that preloaded collection.
+
+See the documentation for sample datasets https://docs.databricks.com/en/dbfs/databricks-datasets.html
+
+and the notebook demo discusseds in class https://github.com/mirkenstein/MSAI-339-NoSQL/tree/master/data-pipelines/Spark-Databricks#sample-datasets
+
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
 2. Display top 5 rows ordered ASC by `age` and ASC by `education_num`.
 Submit the 5 rows from the resutl in point 2 
-https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7274796508260238/2844662950865680/2879908466733289/latest.html
 
+Helpful documentation
+Cnfigure cluster -> https://docs.databricks.com/en/clusters/configure.html
+
+Import notebook -> 
+https://docs.databricks.com/en/notebooks/notebook-export-import.html
