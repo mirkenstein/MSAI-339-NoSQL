@@ -36,6 +36,7 @@ and the notebook demo discusseds in class https://github.com/mirkenstein/MSAI-33
 
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
 2. Display top 5 rows ordered ASC by `age` and ASC by `education_num`.
+
 Submit the 5 rows from the resutl in point 2 
 
 Helpful documentation
