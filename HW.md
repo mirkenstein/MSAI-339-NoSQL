@@ -2,13 +2,13 @@
 All 3 questions are on  db collection `sample_mflix.embedded_movies`
 To load the sample database follow the instructions here [https://github.com/mirkenstein/MSAI-339-NoSQL/blob/master/Mongo/README_ATLAS.md](https://github.com/mirkenstein/MSAI-339-NoSQL/blob/master/Mongo/README_ATLAS.md)
 
-1. Write a  query on which captures all 3 requirements:
-  a. Movies `year` between 1975 and 1980
-  c. Display only 3 columns `title`,`year`, `runtime`
-  b. Order by runtime (asc or desc)
-  c. Return  top 5 results and submit as part of your homework.
+1. Write a  query  which captures all 3 requirements:
+  a. Movies with `year` between 1975 and 1980
+  b. Display only 3 columns `title`,`year`, `runtime`
+  c. Order by runtime (asc or desc)
+  d. Return  top 5 results and submit as part of your homework.
 
-Return results would look like  the 
+Return results would look like  this
 ```csv 
 title,year,runtime
 The Terminator ,1980, 120
@@ -17,6 +17,7 @@ Helpful documentation
  
 
 https://www.mongodb.com/docs/v3.0/tutorial/project-fields-from-query-results/#return-the-specified-fields-and-the-id-field-only
+
 https://www.mongodb.com/docs/manual/reference/operator/query/lte/#perform-an-update-based-on-embedded-document-fields
 
 2. Write an aggregation aggregating `year` which calculates sum of all `runtime` for movies where `year` is between  1975 and 1980 including.
