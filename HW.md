@@ -6,7 +6,12 @@ To load the sample database follow the instructions here [https://github.com/mir
   a. Movies `year` between 1975 and 1980
   c. Display only 3 columns `title`,`year`, `runtime`
   b. Order by runtime (asc or desc)
-  c. Return  top 3 results
+  c. Return  top 5 results and submit as part of your homework.
+
+Return results would look like  the 
+```csv
+title,year,runtime
+The Terminator ,1980, 120
 
 Helpful documentation  
  
