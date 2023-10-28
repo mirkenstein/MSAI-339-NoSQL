@@ -14,7 +14,7 @@ Helpful documentation
 https://www.mongodb.com/docs/v3.0/tutorial/project-fields-from-query-results/#return-the-specified-fields-and-the-id-field-only
 https://www.mongodb.com/docs/manual/reference/operator/query/lte/#perform-an-update-based-on-embedded-document-fields
 
-2. Write an aggregation aggregating `year` which calculates sum of all`runtime` for movies where `year` is between  1975 and 1980 including.
+2. Write an aggregation aggregating `year` which calculates sum of all `runtime` for movies where `year` is between  1975 and 1980 including.
  
  Helpful documentation
   
@@ -35,9 +35,9 @@ See the documentation for sample datasets https://docs.databricks.com/en/dbfs/da
 and the notebook demo discusseds in class https://github.com/mirkenstein/MSAI-339-NoSQL/tree/master/data-pipelines/Spark-Databricks#sample-datasets
 
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
-2. Display top 5 rows ordered ASC by `age` and ASC by `education_num`.
+2. Display top 5 rows ordered ins ascending order by `age` and ascenidng order by `education_num`.
 
-Submit the 5 rows from the resutl in point 2 
+Submit the 5 rows from the result in point 2 as part of your homework submition
 
 Helpful documentation
 Cnfigure cluster -> https://docs.databricks.com/en/clusters/configure.html
