@@ -8,7 +8,7 @@ To load the sample database follow the instructions here [https://github.com/mir
     * Order by runtime (asc or desc)
 
 
-    **Submission:**  Return  top 5 results and submit as part of your homework submission.
+**Submission:**  Return  top 5 results and submit as part of your homework submission.
 
 Return results would look like  this
 ```csv 
