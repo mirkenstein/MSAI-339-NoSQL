@@ -6,8 +6,7 @@ To load the sample database follow the instructions here [https://github.com/mir
     * Movies with `year` between 1975 and 1980
     * Display only 3 columns `title`,`year`, `runtime`
     * Order by runtime (asc or desc)
-
-
+> [!IMPORTANT]  
 **Submission:**  Return  top 5 results and submit as part of your homework submission.
 
 Return results would look like  this
@@ -23,8 +22,8 @@ https://www.mongodb.com/docs/v3.0/tutorial/project-fields-from-query-results/#re
 https://www.mongodb.com/docs/manual/reference/operator/query/lte/#perform-an-update-based-on-embedded-document-fields
 
 2. Write an aggregation aggregating `year` which calculates sum of all `runtime` for movies where `year` is between  1975 and 1980 including.
-
-  **Submission:** Return  in your homework the `year` and sum of `runtime` 
+> [!IMPORTANT]  
+  **Submission:** Return  in your homework the `year` and sum of `runtime`. 
 
  Return results would look like  this 
 ```csv
@@ -47,8 +46,8 @@ and the notebook demo discusseds in class https://github.com/mirkenstein/MSAI-33
 
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
 2. Display top 5 rows ordered ins ascending order by `age` and ascenidng order by `education_num`.
-
-**Submission:** Submit the 5 rows from the result in point 2 as part of your homework submition
+> [!IMPORTANT]  
+**Submission:** Submit the 5 rows from the result in point 2 as part of your homework submition.
 
 Helpful documentation
 Cnfigure cluster -> https://docs.databricks.com/en/clusters/configure.html
