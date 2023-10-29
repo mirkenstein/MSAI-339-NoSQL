@@ -36,17 +36,16 @@ year,sumRuntime
 https://www.mongodb.com/docs/manual/aggregation/
 
 ### Spark Databriks
-Evey cluster in databricks hase access to preloaded datasets.
+Evey cluster in databricks has access to preloaded datasets.
 
 The dataset `/databricks-datasets/adult/adult.data` is part of that preloaded collection.
 
-See the documentation for sample datasets https://docs.databricks.com/en/dbfs/databricks-datasets.html
+See the notebook demo discusseds in class 
 
-and the notebook demo discusseds in class 
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7567016051051197/62385017331220/7192593576348604/latest.html
 
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
-2. Display top 5 rows ordered ins ascending order by `age` and ascenidng order by `education_num`.
+2. Display top 5 rows ordered in ascending order by `age` and ascenidng order by `education_num`.
 > [!IMPORTANT]  
 **Submission:** Submit the 5 rows from the result in point 2 as part of your homework submition.
 
