@@ -42,7 +42,8 @@ The dataset `/databricks-datasets/adult/adult.data` is part of that preloaded co
 
 See the documentation for sample datasets https://docs.databricks.com/en/dbfs/databricks-datasets.html
 
-and the notebook demo discusseds in class https://github.com/mirkenstein/MSAI-339-NoSQL/tree/master/data-pipelines/Spark-Databricks#sample-datasets
+and the notebook demo discusseds in class 
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7567016051051197/62385017331220/7192593576348604/latest.html
 
 1. Read into a dataframe the sample dataset `/databricks-datasets/adult/adult.data` 
 2. Display top 5 rows ordered ins ascending order by `age` and ascenidng order by `education_num`.
