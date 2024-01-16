@@ -15,7 +15,7 @@ docker network create elastic
 
 Pull the elasticsearch database image
 ````shell
-docker pull docker.elastic.co/elasticsearch/elasticsearch:8.10.4
+docker pull docker.elastic.co/elasticsearch/elasticsearch:8.11.4
 ````
 ### Start elasticsearch in Docker
 
@@ -26,7 +26,7 @@ sysctl -w vm.max_map_count=262144
 ````
 Launch the Elasticsearch server in Docker
 ```shell
-docker run --name es01 --net elastic  -e ES_JAVA_OPTS="-Xms1g -Xmx1g" -e NODE_NAME="es-01"  -p 9200:9200 -it docker.elastic.co/elasticsearch/elasticsearch:8.10.4
+docker run --name es01 --net elastic  -e ES_JAVA_OPTS="-Xms1g -Xmx1g" -e NODE_NAME="es-01"  -p 9200:9200 -it docker.elastic.co/elasticsearch/elasticsearch:8.11.4
 ```
 Same command but across multiline. Use either of the two.
 ```shell
@@ -35,7 +35,7 @@ docker run --name es01 \
 -e ES_JAVA_OPTS="-Xms1g -Xmx1g" \
 -e NODE_NAME="es-01"  \
 -p 9200:9200 \
--it docker.elastic.co/elasticsearch/elasticsearch:8.10.4
+-it docker.elastic.co/elasticsearch/elasticsearch:8.11.4
 ```
 
 After some time you  will see on the terminal the server password and enrollment tokens.
@@ -60,7 +60,7 @@ The output will look like this:
 • Copy the following enrollment token and start new Elasticsearch nodes with `bin/elasticsearch --enrollment-token <token>` (valid for the next 30 minutes):
  another-long-random-string....ABC== 
   If you're running in Docker, copy the enrollment token and run:
-  `docker run -e "ENROLLMENT_TOKEN=<token>" docker.elastic.co/elasticsearch/elasticsearch:8.10.4`
+  `docker run -e "ENROLLMENT_TOKEN=<token>" docker.elastic.co/elasticsearch/elasticsearch:8.11.4`
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   
 ````
@@ -85,11 +85,11 @@ In a separate terminal window download and start the Kibana instance
 
 Download Kibana image
 ```shell
-docker pull docker.elastic.co/kibana/kibana:8.10.4
+docker pull docker.elastic.co/kibana/kibana:8.11.4
 ```
 Start Kibana by running 
 ```shell
-docker run --name kib-01 --net elastic -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" -p 5601:5601 docker.elastic.co/kibana/kibana:8.10.4
+docker run --name kib-01 --net elastic -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" -p 5601:5601 docker.elastic.co/kibana/kibana:8.11.4
 ```
 Same as the above but multyline command
 ```shell
@@ -97,7 +97,7 @@ docker run --name kib-01 \
 --net elastic \
 -e ELASTICSEARCH_SSL_VERIFICATIONMODE="certificate" \
 -p 5601:5601 \
-docker.elastic.co/kibana/kibana:8.10.4
+docker.elastic.co/kibana/kibana:8.11.4
 ```
 
 When you start Kibana, a unique link is output to your terminal.
@@ -108,40 +108,49 @@ It will have the format
 Go to http://0.0.0.0:5601/?code=123456 to get started.
 ```
 Visit in your web-browser the url:
+
 [http://localhost:5601/?code=123456](http://localhost:5601/?code=123456)
 
 You will be prompted to enter the Kibana enrollment token that was generated when launching the Elasticsearch server.
 Make sure to include the characters ```==``` at the end of the token.
-![img-kibana-token](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-enrollment-Elastic.png)
+
+![img-kibana-token](./Kibana-enrollment-Elastic.png)
 
 Login to kibana using the username `elastic` and the password that was generated earlier. 
-![img-kibana-login](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-login-Elastic.png)
+
+![img-kibana-login](./Kibana-login-Elastic.png)
 
 From the home screen follow the link to upload file
+
 [http://localhost:5601/app/home#/tutorial_directory/fileDataViz](http://localhost:5601/app/home#/tutorial_directory/fileDataViz)
-![img-upload-data](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-Upload-file.png)
+
+![img-upload-data](./Kibana-Upload-file.png)
 
 Also here is the direct link for the upload file
+
 [http://localhost:5601/app/home#/tutorial_directory/fileDataViz](http://localhost:5601/app/home#/tutorial_directory/fileDataViz)
-![img-upload-file-screen](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-Upload-file-screen.png)
+
+[img-upload-file-screen](./Kibana-Upload-file-screen.png)
 
 Upload the CSV file that you prepared earlier.
 
 Go to Advanced tab in order to tweak some of the settings.
-![img-upload-kibana](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-upload-advanced-settings.png)
+
+![img-upload-kibana](./Kibana-upload-advanced-settings.png)
+
 - For index name put `index-sdoh-2020` or something similar.
 - Make sure to check the checkbox "Create Data View"
 
 In the Mappings textfield will need to change the variable types for some of the fields.
 Scroll to the very bottom and change the types from `long` to `keyword`  for the fields 
 `"ZIPCODE", "ZCTA","STATEFIPS"`
-![img-kibana-new-mappings](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-new-mappings.png)
+![img-kibana-new-mappings](./Kibana-new-mappings.png)
 
 Hit the import button at the bottom left part of the screen.
-![img-kibana-loading](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-load-progress.png)
+![img-kibana-loading](./Kibana-load-progress.png)
 
 Once import completes click on the View index in discover 
-![img-kibana-import-complete](OneDrive/Documents/HLTH/MSAI339-NoSQL/ELK/Kibana-upload-complete.png)
+![img-kibana-import-complete](./Kibana-upload-complete.png)
 
 #### Explore your data
 In Discover you can explore your data as shown in the manual.

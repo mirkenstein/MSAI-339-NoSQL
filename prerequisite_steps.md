@@ -36,9 +36,9 @@ To generate this message, Docker took the following steps:
 ### Download the docker images that we will need for the exercises
 Elastic-Logstash-Kibana
 ```shell
-docker pull docker.elastic.co/elasticsearch/elasticsearch:8.10.4
-docker pull docker.elastic.co/kibana/kibana:8.10.4
-docker pull docker.elastic.co/logstash/logstash:8.10.4
+docker pull docker.elastic.co/elasticsearch/elasticsearch:8.11.4
+docker pull docker.elastic.co/kibana/kibana:8.11.4
+docker pull docker.elastic.co/logstash/logstash:8.11.4
 ```
 Streamsets
 ```shell
